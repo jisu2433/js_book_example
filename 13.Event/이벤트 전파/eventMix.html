@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body,html {height: 100%;}
+  </style>
+  <body>
+    body입니다.
+    <div>
+      div입니다.
+      <p>
+        p입니다.
+      </p>
+    </div>
+  <script>
+  // 버블링 단계
+  document.body.addEventListener('click', () => {
+    console.log('Body element event handler');
+  });
+
+  // 캡처링 단계
+  document.querySelector('div').addEventListener('click', () => {
+    console.log('Div element event handler');
+  }, true);
+
+  // 타깃 단계
+  document.querySelector('p').addEventListener('click', () => { 
+    console.log('P element event handler');
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="box1">
+    box1
+    <div class="box2">
+      box2
+      <div class="box3">
+        box3
+      </div>
+    </div>
+  </div>
+  <script>
+  const boxes = document.querySelectorAll('div');
+    boxes.forEach(function (div) {
+    div.addEventListener('click', boxEvent, {
+      capture: true // 캡처링을 동작하게 하는 옵션
+      });
+    });
+
+  function boxEvent(event) {
+    console.log(event.currentTarget.className);
+  }
+  </script>
+</body>
+</html>
