@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="flowers">
+    <li id="rose" class="active">Rose</li>
+    <li id="freesia">Freesia</li>
+    <li id="carnation">Carnation</li>
+  </ul>
+  <div>선택한 꽃 :<b class="msg"></b></div>
+  <script>
+  const flowers = document.getElementById('flowers');
+  const msg = document.querySelector('.msg');
+
+  function activate({target}) {
+  
+  [...flowers.children].forEach(flowers => {
+  flowers.classList.toggle('active', flowers === target);
+  msg.textContent = target.id;
+  });
+  }
+
+  document.getElementById('rose').onclick = activate;
+  document.getElementById('freesia').onclick = activate;
+  document.getElementById('carnation').onclick = activate;
+  </script>
+</body>
+</html>
