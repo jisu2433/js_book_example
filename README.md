@@ -1,1 +1,1 @@
-# js_book_example
+# 『알잘딱깔센 JavaScript 핵심개념』 13. 이벤트 전파, 위임 예제 코드
